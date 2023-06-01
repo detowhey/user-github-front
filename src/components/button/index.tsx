@@ -1,16 +1,21 @@
-import React from 'react'
+import Button from 'react-bootstrap/Button'
+import { ButtonTheme } from '../../common/util/enum/buttonsTheme'
 
 interface Props {
   type?: "button" | "submit" | undefined,
-  onClick: () => void,
-  buttonName?: React.ReactNode
+  onClick?: () => void,
+  buttonName?: string
+  variant?: ButtonTheme,
 }
 
-export default function Button({ onClick, type, buttonName}: Props) {
+export default function GenericButton({ onClick, type, buttonName, variant = ButtonTheme.DARK }: Props) {
   return (
-    <button
+    <Button
+      variant={variant}
+      className="mr-1"
       onClick={onClick}
       type={type}>
       {buttonName}
-    </button>)
+    </Button>
+  )
 }
