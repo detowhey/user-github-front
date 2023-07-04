@@ -1,6 +1,6 @@
 import Card from "react-bootstrap/Card"
 import ListGroup from "react-bootstrap/ListGroup"
-import { GithubUser } from "../../common/util/githubUser"
+import { GithubUser } from "../../model/githubUser"
 import Button from "react-bootstrap/Button"
 import { ButtonTheme } from "../../common/util/enum/buttonsTheme"
 
